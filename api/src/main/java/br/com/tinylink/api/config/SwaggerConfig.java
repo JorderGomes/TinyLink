@@ -1,0 +1,16 @@
+package br.com.tinylink.api.config;
+
+import org.springdoc.core.models.GroupedOpenApi;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SwaggerConfig {
+    @Bean
+    public GroupedOpenApi publicApi() {
+        return GroupedOpenApi.builder()
+                .group("api") // Nome do grupo (pode ser customizado)
+                .packagesToScan("br.com.tinylink.api") // Pacote dos seus controllers
+                .build();
+    }
+}
