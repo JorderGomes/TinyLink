@@ -10,7 +10,7 @@ public class SwaggerConfig {
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
                 .group("api") 
-                .packagesToScan("br.com.tinylink.api") // Pacote dos seus controllers
+                .packagesToScan("br.com.tinylink.api.controllers")
                 .build();
     }
 }
