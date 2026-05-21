@@ -39,9 +39,9 @@ flowchart TD
     CodeExists -->|Não| SaveLink[Salva Link com url original e code]
     SaveLink --> Database[(PostgreSQL)]
     Database --> ReturnShortUrl[Retorna URL curta]
-    ReturnShortUrl --> ClientReceives[Cliente recebe http://localhost:8080/tinylink/{code}]
+    ReturnShortUrl --> ClientReceives["Cliente recebe http://localhost:8080/tinylink/{code}"]
 
-    RequestType -->|GET /tinylink/{code}| RedirectRequest[Recebe código curto pela URL]
+    RequestType -->|"GET /tinylink/{code}"| RedirectRequest[Recebe código curto pela URL]
     RedirectRequest --> ControllerRedirect[ShortenerController.redirect]
     ControllerRedirect --> FindOriginal[LinkService busca Link por code]
     FindOriginal --> Database
