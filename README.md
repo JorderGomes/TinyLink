@@ -64,7 +64,7 @@ flowchart TD
 2.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/evandrohenrique01/TinyLink.git
+    git clone https://github.com/rodriguesxxx/TinyLink.git
     cd TinyLink
     ```
 
