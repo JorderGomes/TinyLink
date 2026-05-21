@@ -6,6 +6,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    environment:
+      DATABASE_URL: "jdbc:postgresql://db-postgres:5432/tiny_link"
+      DB_USERNAME: "postgres"
+      DB_PASSWORD: "2004"
     depends_on:
       - db-postgres
 
